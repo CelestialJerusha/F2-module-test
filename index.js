@@ -51,13 +51,22 @@ function addOnClick(){
         <td>${studentEmail}</td>
         <td>${studentAge}</td>
         <td>${studentGPA}</td>
-        <td>${studentDegree}<img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" onclick="editData()"><img src="https://www.svgrepo.com/show/21045/delete-button.svg" onclick="removeItem()"></td>
+        <td>${studentDegree}<img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" onclick="editData()"><img src="https://www.svgrepo.com/show/21045/delete-button.svg" onclick="removeItem(${id})"></td>
         </tr>`;
         table.innerHTML += template;
     }
    
 }
 
+function removeItem(id){
+    
+
+    let table = document.querySelector("table");
+
+    // Delete second row
+    table.deleteRow(id);
+    
+}
 
 function searchData(){
 var input, filter,table, tr, td, i,txtValue;
