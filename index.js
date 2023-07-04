@@ -51,17 +51,39 @@ function addOnClick(){
         <td>${studentEmail}</td>
         <td>${studentAge}</td>
         <td>${studentGPA}</td>
-        <td>${studentDegree}<button type="button" class="btn" onclick="removeItem(${id})"><img src="https://www.svgrepo.com/show/21045/delete-button.svg"></button></td>
+        <td>${studentDegree}<img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" onclick="editData()"><img src="https://www.svgrepo.com/show/21045/delete-button.svg" onclick="removeItem()"></td>
         </tr>`;
         table.innerHTML += template;
-
-        function removeItem() {
-            document.getElementById('table').deleteRow(id);
-        }
-        removeItem();
-        
-    }   
+    }
+   
 }
+
+
+function searchData(){
+var input, filter,table, tr, td, i,txtValue;
+input = document.getElementById("searchBar");
+table = document.getElementById("table");
+tr = table.getElementsByTagName("tr");
+
+filter = input.value.toUpperCase();
+
+for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+  
+
+}
+searchData();
+
+
 
 
 
