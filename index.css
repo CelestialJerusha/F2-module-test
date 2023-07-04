@@ -64,7 +64,11 @@ td{
 }
 img{
     height: 15px;
-    margin-left: 10px;
     background-color: #FFFFFF;
+}
+.btn{
+    height: 15px;
+    width: 2px;
+    margin-left: 2px;
 }
 

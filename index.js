@@ -51,9 +51,14 @@ function addOnClick(){
         <td>${studentEmail}</td>
         <td>${studentAge}</td>
         <td>${studentGPA}</td>
-        <td>${studentDegree}<button type="button" onClick='removeItem(${students.id})'><img src="https://www.svgrepo.com/show/21045/delete-button.svg"></button></td>
+        <td>${studentDegree}<button type="button" class="btn" onclick="removeItem(${id})"><img src="https://www.svgrepo.com/show/21045/delete-button.svg"></button></td>
         </tr>`;
         table.innerHTML += template;
+
+        function removeItem() {
+            document.getElementById('table').deleteRow(id);
+        }
+        removeItem();
         
     }   
 }
