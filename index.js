@@ -54,6 +54,7 @@ function addOnClick(){
         <td>${studentDegree}<img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/edit-512.png" onclick="editData()"><img src="https://www.svgrepo.com/show/21045/delete-button.svg" onclick="removeItem(${id})"></td>
         </tr>`;
         table.innerHTML += template;
+        students.length++;
     }
    
 }
@@ -88,7 +89,8 @@ for (i = 0; i < tr.length; i++) {
 }
 searchData();
 
-
-
+function editData(){
+    
+}
 
 
