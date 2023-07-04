@@ -59,7 +59,7 @@ function addOnClick(){
 }
 
 function removeItem(id){
-    let table = document.querySelector("table");
+    let table = document.querySelector("table"); 
     table.deleteRow(id);
     
 }
