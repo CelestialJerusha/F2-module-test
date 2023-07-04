@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Student Management CRUD</h1>
+        <form class="form-container">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="number" id="gpa" min="0" max="10" placeholder="GPA" required>
+            <input type="number" id="age" min="0" max="100" placeholder="Age" required>
+            <input type="text" id="degree" placeholder="Degree" required>
+            <button type="button" onclick="addOnClick()">Add Student</button>    
+        </form>
+
+            <input type="text" name="searchbar" placeholder="Search By Name, email or degree" class="search-bar">
+        
+            <div id="table"></div>
+            
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
